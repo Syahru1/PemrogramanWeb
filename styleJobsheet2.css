@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+    padding: 20px;
+    padding-bottom: 1000px;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(135DEG, #ab0569, #35e8e5);
+    padding: 20px;
+
+}
+
+/*Latihan 1*/
+.container-satu {
+    width: 1200px;
+    margin: 50px;
+    background-color: #fdf1f8;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar-satu {
+    width: 600px;
+    background: linear-gradient(135DEG, #ffadd5, #ab0569);
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    order: 1;
+    color: #000000;
+    flex: auto;
+}
+
+.kolom-utama {
+    width: 100;
+    background-color: #d1689e;
+    padding: 20px;
+    color: #000000;
+    text-align: left;
+    box-sizing: border-box;
+    order: 2;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    flex: auto;
+}
+
+.sidebar-dua {
+    width: 700px;
+    background: linear-gradient(135DEG, #ff91c6, #45e5eb);
+    padding: 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    order: 3;
+    border-radius: 10px;
+    flex: auto;
+}
+
+
+.kolom-utama img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.sidebar-satu a:hover {
+    color: #ffffff;
+}
