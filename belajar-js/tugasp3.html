@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Sederhana</title>
+    <link rel="stylesheet" href="tugasp3.css">
+</head>
+<body>
+    <form id="dataForm">
+        <h2>Formulir Pendaftaran</h2>
+
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama">
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat">
+        </div>
+
+        <div class="form-group">
+            <label for="tanggal_lahir">Tanggal Lahir:</label>
+            <input type="text" id="tanggal_lahir" name="tanggal_lahir">
+        </div>
+
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <div class="input-group">
+                <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki">
+                <label for="laki=laki">Laki-laki</label>
+                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+                <label for="wanita">Wanita</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Hobby:</label>
+            <div class="input-group">
+                <input type="checkbox" id="berenang" name="hobby" value="Berenang">
+                <label for="berenang">Berenang</label>
+                <input type="checkbox" id="berlari" name="hobby" value="Berlari">
+                <label for="berlari">Berlari</label>
+                <input type="checkbox" id="lain-lain-hobby" name="hobby" value="Lain-lain">
+                <label for="lain-lain-hobby">Lain-lain</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Pekerjaan:</label>
+            <div class="input-group">
+                <input type="checkbox" id="swasta" name="pekerjaan" value="Swasta">
+                <label for="swasta">Swasta</label>
+                <input type="checkbox" id="pns" name="pekerjaan" value="PNS">
+                <label for="pns">PNS</label>
+                <input type="checkbox" id="lain-lain-pekerjaan" name="pekerjaan" value="Lain-lain">
+                <label for="lain-lain-pekerjaan">Lain-lain</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="konfirmasi" name="konfirmasi">
+            <label for="konfirmasi">Check jika anda akan mengirimkan data ini</label>
+        </div>
+
+        <input type="submit" value="Cek!">
+    </form>
+
+    <script src="tugasp3.js"></script>
+</body>
+</html>
