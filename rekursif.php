@@ -65,6 +65,50 @@
 
 // tampilkanMenuBertingkat($menu);
 
+// $menu = [
+//     [
+//         "nama" => "Beranda"
+//     ],
+//     [
+//         "nama" => "Berita",
+//         "subMenu" => [
+//             [
+//                 "nama" => "Wisata",
+//                 "subMenu" => [
+//                     [
+//                         "nama" => "Pantai"
+//                     ],
+//                     [
+//                         "nama" => "Gunumg"
+//                     ]
+//                 ]
+//             ],
+//             [
+//                 "nama" => "Kuliner"
+//             ],
+//             [
+//                 "nama" => "Hiburan"
+//             ]
+//         ]
+//     ],
+//     [
+//         "nama" => "Tentang"
+//     ],
+//     [
+//         "nama" => "Kontak"
+//     ],
+// ];
+
+// function tampilkanMenuBertingkat (array $menu) {
+//     echo "<ul>";
+//     foreach ($menu as $key => $item) {
+//         echo "<li>{$item['nama']}</li>";
+//     }
+//     echo "</ul>";
+// }
+
+// tampilkanMenuBertingkat($menu);
+
 $menu = [
     [
         "nama" => "Beranda"
@@ -79,7 +123,7 @@ $menu = [
                         "nama" => "Pantai"
                     ],
                     [
-                        "nama" => "Gunumg"
+                        "nama" => "Gunung"
                     ]
                 ]
             ],
@@ -96,13 +140,17 @@ $menu = [
     ],
     [
         "nama" => "Kontak"
-    ],
+    ]
 ];
 
-function tampilkanMenuBertingkat (array $menu) {
+function tampilkanMenuBertingkat(array $menu) {
     echo "<ul>";
-    foreach ($menu as $key => $item) {
-        echo "<li>{$item['nama']}</li>";
+    foreach ($menu as $item) {
+        echo "<li>{$item['nama']}";
+        if (isset($item['subMenu'])) {
+            tampilkanMenuBertingkat($item['subMenu']);
+        }
+        echo "</li>";
     }
     echo "</ul>";
 }
