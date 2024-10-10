@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
     <title>Data Mahasiswa</title>
     <script src="jquery-3.7.1.js"></script>
