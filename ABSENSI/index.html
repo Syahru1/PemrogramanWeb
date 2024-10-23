@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Absensi Mahasiswa</h1>
+        <form id="attendanceForm" action="process_attendance.php" method="POST">
+            <div class="form-group">
+                <label for="studentName">Nama Mahasiswa:</label>
+                <input type="text" id="studentName" name="studentName" required>
+            </div>
+            <div class="form-group">
+                <label for="studentID">NIM:</label>
+                <input type="text" id="studentID" name="studentID" required>
+            </div>
+            <div class="form-group">
+                <label for="attendanceStatus">Status Kehadiran:</label>
+                <select id="attendanceStatus" name="attendanceStatus">
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                </select>
+            </div>
+            <button type="submit">Simpan Absensi</button>
+        </form>
+
+        <div id="attendanceTable">
+            <h2>Data Absensi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Mahasiswa</th>
+                        <th>NIM</th>
+                        <th>Status Kehadiran</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceData">
+                    <!-- Data absensi akan ditampilkan di sini -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

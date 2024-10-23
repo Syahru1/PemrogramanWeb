@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Input Data Mahaiswa</title>
+        <link rel="stylesheet" href="post_test.css">
+        <script src="jquery-3.7.1.js"></script>
+        <script src="post_test.js"></script>
+    </head>
+    <body>
+        <h2>Form Input Data Mahasiswa</h2>
+        <form action="post_test.php" method="POST">
+            <div class="input-form">
+                <div class="input-baris">
+                    <div class="input-kolom-nama">
+                        <label for="nama[]">Nama:</label>
+                        <input type="text" name="nama[]" required>
+                        <input type="text" name="nama[]" required>
+                        <input type="text" name="nama[]" required>
+                        <input type="text" name="nama[]" required>
+                        <input type="text" name="nama[]" required>
+                    </div>
+                    <div class="input-kolom">
+                        <label for="nama[]">NIM:</label>
+                        <input type="text" name="nim[]" required>
+                        <input type="text" name="nim[]" required>
+                        <input type="text" name="nim[]" required>
+                        <input type="text" name="nim[]" required>
+                        <input type="text" name="nim[]" required>
+                    </div>
+                    <div class="input-kolom">
+                        <label for="nama[]">Jurusan:</label>
+                        <input type="text" name="jurusan[]" required>
+                        <input type="text" name="jurusan[]" required>
+                        <input type="text" name="jurusan[]" required>
+                        <input type="text" name="jurusan[]" required>
+                        <input type="text" name="jurusan[]" required>
+                    </div>
+                    <div class="input-kolom">
+                        <label for="nama[]">Prodi:</label>
+                        <input type="text" name="prodi[]" required>
+                        <input type="text" name="prodi[]" required>
+                        <input type="text" name="prodi[]" required>
+                        <input type="text" name="prodi[]" required>
+                        <input type="text" name="prodi[]" required>
+                    </div>
+                    <div class="input-kolom">
+                        <label for="nama[]">Kelas:</label>
+                        <input type="text" name="kelas[]" required>
+                        <input type="text" name="kelas[]" required>
+                        <input type="text" name="kelas[]" required>
+                        <input type="text" name="kelas[]" required>
+                        <input type="text" name="kelas[]" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <button id="showButton">Click to show databasse</button>
+        <div class="content">
+        <table id="data-mahasiswa">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Jurusan</th>
+                    <th>Prodi</th>
+                    <th>Kelas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($mahasiswa as $data): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($data['nama']); ?></td>
+                    <td><?php echo htmlspecialchars($data['nim']); ?></td>
+                    <td><?php echo htmlspecialchars($data['jurusan']); ?></td>
+                    <td><?php echo htmlspecialchars($data['prodi']); ?></td>
+                    <td><?php echo htmlspecialchars($data['kelas']); ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        <div class="average">
+            <strong>Total Mahasiswa yang Diinputkan:</strong> 
+            <span id="total-mahasiswa"><?php echo $jumlah_mahasiswa; ?></span>
+        </div>
+    </body>
+</html>
