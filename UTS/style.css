@@ -139,14 +139,6 @@ th {
     color: #ffffff; 
 }
 
-tr:nth-child(even) {
-    background-color: #ffffff;
-}
-
-tr:hover {
-    background-color: #ffffff; 
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -201,14 +193,6 @@ th, td {
 th {
     background-color: #ffffff;
     color: #000000;
-}
-
-tr:nth-child(even) {
-    background-color: #ffffff; 
-}
-
-tr:hover {
-    background-color: #ffffff; 
 }
 
 .simple-alert {
