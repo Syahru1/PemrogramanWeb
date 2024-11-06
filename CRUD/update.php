@@ -1,5 +1,4 @@
-<?php 
-include 'config.php';
+<?php include 'config.php';
 
 if (isset($_GET['id_pelanggan'])) {
     $id = $_GET['id_pelanggan'];
@@ -72,9 +71,9 @@ if (isset($_GET['id_pelanggan'])) {
 
         <?php
     } else {
-        echo "Data tidak ditemukan!";
+        echo "";
     }
 } else {
-    echo "ID tidak ditemukan!";
+    echo "";
 }
 ?>

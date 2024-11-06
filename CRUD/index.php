@@ -10,8 +10,10 @@ $stmt = sqlsrv_query($conn, $sql);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>PERUSAHAAN MSG</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -22,7 +24,7 @@ $stmt = sqlsrv_query($conn, $sql);
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div class="card">
-                        <div class="card-header bg-info text-light">Form Input Data Pelanggan</div>
+                        <div class="card-header bg-success text-light">Form Input Data Pelanggan</div>
                             <div class="card-body">
                                 <form method="POST" action="insert.php">
                                     <div class="mb-3">
@@ -42,7 +44,7 @@ $stmt = sqlsrv_query($conn, $sql);
 
                                     <div class="mb-3">
                                         <label class="form-label">Pilih Lapangan</label>
-                                        <input type="text" name="tlapangan" class="form-control" placeholder="Masukkan Nomor Telepon">
+                                        <input type="text" name="tlapangan" class="form-control" placeholder="Masukkan Cabor Lapangan">
                                     </div>
                                     
                                     <div class="mb-3">
@@ -72,7 +74,7 @@ $stmt = sqlsrv_query($conn, $sql);
                 </div>
 
                 <div class="card mt-3">
-                    <div class="card-header bg-info text-light">Data Persewaan</div>
+                    <div class="card-header bg-success text-light">Data Persewaan</div>
                         <div class="card-body">
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
