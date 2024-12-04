@@ -1,7 +1,7 @@
 <?php include 'config.php';
 
 $sql = "SELECT * FROM Lapangan";
-$stmt = sqlsrv_query($conn, $sql);
+$stmt = sqlsrv_query($conn, $sql); // Menjalankan query SQL untuk mengambil data dari tabel Lapangan.
 ?>
 
 <!Doctype html>
@@ -22,11 +22,11 @@ $stmt = sqlsrv_query($conn, $sql);
             <h3 class="text-center"> Lapangan Olahraga</h3>
 
             <div class="row">
-                <div class="col-md-8 mx-auto">
+                <div class="col-md-8 mx-auto"> <!-- Mengatur lebar kolom dan posisi form-->
                     <div class="card">
-                        <div class="card-header bg-success text-light">Form Input Data Pelanggan</div>
+                        <div class="card-header bg-success text-light">Form Input Data Pelanggan</div> <!-- Membuat header form-->
                             <div class="card-body">
-                                <form method="POST" action="insert.php">
+                                <form method="POST" action="insert.php"> 
                                     <div class="mb-3">
                                         <label class="form-label">Id Pelanggan</label>
                                         <input type="text" name="tidpel" class="form-control" placeholder="Masukkan Id Pelanggan">
@@ -93,7 +93,7 @@ $stmt = sqlsrv_query($conn, $sql);
                                 <tbody>
                                     <?php
                                         $no = 1;
-                                        while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                                        while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) { // sqlsrv_fetch_array: Mengambil data per baris dalam bentuk array asosiatif (berdasarkan kolomnya).
                                             echo "<tr>";
                                             echo "<td>" . $no++ . "</td>";
                                             echo "<td>" . $row['id_pelanggan'] . "</td>";

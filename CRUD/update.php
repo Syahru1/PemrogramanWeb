@@ -1,5 +1,6 @@
 <?php include 'config.php';
 
+// $_GET: Method untuk mengambil data yang dikirim melalui URL, seperti ID pelanggan yang digunakan untuk memilih data yang ingin diperbarui atau dihapus.
 if (isset($_GET['id_pelanggan'])) {
     $id = $_GET['id_pelanggan'];
     $sql = "SELECT * FROM Lapangan WHERE id_pelanggan = ?";
@@ -8,6 +9,7 @@ if (isset($_GET['id_pelanggan'])) {
     $old = sqlsrv_fetch_array($exec, SQLSRV_FETCH_ASSOC);
 
     if ($old) {
+        // $_POST: Method untuk mengambil data yang dikirim dari form melalui metode POST. Data ini kemudian diproses, disimpan, atau digunakan dalam query SQL.
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $idpelanggan = $_POST['id_pelanggan']; 
             $namapelanggan = $_POST['nama_pelanggan'];
